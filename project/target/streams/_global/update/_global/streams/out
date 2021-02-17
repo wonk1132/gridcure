@@ -1,0 +1,4 @@
+[debug] not up to date. inChanged = false, force = false
+[debug] Updating ProjectRef(uri("file:/Users/kevinwon/repos/wonk/quickstart/project/"), "quickstart-build")...
+[debug] Done updating ProjectRef(uri("file:/Users/kevinwon/repos/wonk/quickstart/project/"), "quickstart-build")
+[warn] There may be incompatibilities among your library dependencies; run 'evicted' to see detailed eviction warnings.
