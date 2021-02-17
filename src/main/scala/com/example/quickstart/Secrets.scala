@@ -65,7 +65,7 @@ object Secrets {
           sql"""select now()""".map(r => r.string(0))
             .single().apply()
         }
-        now.getOrElse("waaat")
+        now.getOrElse("waaattttt")
 
 
       } catch {
