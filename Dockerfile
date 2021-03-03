@@ -1,6 +1,6 @@
-FROM adoptopenjdk/openjdk8:alpine-jre  as stage0
+FROM adoptopenjdk/openjdk8:alpine-jre as stage0
 LABEL snp-multi-stage="intermediate"
-LABEL snp-multi-stage-id="d08bb4b3-1f96-4ba0-8d21-b03d252cb024"
+LABEL snp-multi-stage-id="b5d89d48-c54a-483e-b960-ddd7546d5bc4"
 WORKDIR /opt/docker
 COPY target/docker/stage/1/opt /1/opt
 COPY target/docker/stage/2/opt /2/opt

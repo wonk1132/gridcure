@@ -25,7 +25,9 @@ lazy val root = (project in file("."))
       "com.google.cloud" % "google-cloud-secretmanager" % "1.2.9",
       "org.postgresql"  % "postgresql"           % PotgresqlVersion,
       "org.scalikejdbc" %% "scalikejdbc"         % "3.5.0",
-      "com.zaxxer" % "HikariCP" % "3.4.5"
+      "com.zaxxer" % "HikariCP" % "3.4.5",
+      "org.scalikejdbc" %% "scalikejdbc" % "3.5.0",
+      "com.typesafe.scala-logging" %% "scala-logging" % "3.9.2",
     ),
     addCompilerPlugin("org.typelevel" %% "kind-projector"     % "0.10.3"),
     addCompilerPlugin("com.olegpy"    %% "better-monadic-for" % "0.3.1"),
@@ -34,6 +36,12 @@ lazy val root = (project in file("."))
 
 dockerImageCreationTask := (publishLocal in Docker).value
 dockerBaseImage         := "adoptopenjdk/openjdk8:alpine-jre"
+dockerAlias             := DockerAlias(
+  Some("gcr.io"),
+  Some("gridcure-dev"),
+  "quickstart",
+  Some("latest")
+)
 
 enablePlugins(JavaAppPackaging)
 enablePlugins(AshScriptPlugin)
